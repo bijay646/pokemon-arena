@@ -1,0 +1,11 @@
+---
+import Counter from "components/Counter";
+import MainLayout from "layouts/main-layout.astro";
+---
+
+<MainLayout title = "Pokemon list">
+  <div>
+    <h1 class="text-red-400">Astro</h1>
+    <Counter client:load />
+  </div>
+</MainLayout>
