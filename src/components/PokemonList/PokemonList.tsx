@@ -12,6 +12,7 @@ const PokemonList = () => {
   const [pokemons, setPokemons] = useState<PokemonProps[]>([]);
   const [totalPage, setTotalPage] = useState<number>();
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const $pokemonStore = useStore(pokemonStore);
 
@@ -20,6 +21,7 @@ const PokemonList = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
     try {
       getPokemonList(currentPage)
         .then((data) => {
@@ -30,6 +32,7 @@ const PokemonList = () => {
     } catch (error) {
       setError(error.message);
     }
+    setLoading(false);
   }, [currentPage]);
 
   useEffect(() => {
@@ -66,7 +69,7 @@ const PokemonList = () => {
               <PokemonCard
                 item={item}
                 key={i}
-                loading={false}
+                loading={loading}
                 setError={setError}
               />
             ))}
