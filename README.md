@@ -29,10 +29,10 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-##clone the project in your local repository
+# clone the project in your local repository
 
-##install the necessary depencencies
+# install the necessary depencencies
 
-#search for pokemon name through the input field
+## search for pokemon name through the input field
 
-#use pagination at buttom for moving to different page
+## use pagination at buttom for moving to different page
