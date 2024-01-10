@@ -1,20 +1,22 @@
 ---
-const {title} = Astro.props
-import "styles.css"
+const { title } = Astro.props;
+import "styles.css";
 ---
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Site for viewing pokemon" />
-    <meta title= {title} />
-    <title >Pokemon Zone</title>
-</head>
-<body>
-    <main class="px-7 py-14 flex flex-col items-center text-center h-full">
-        <slot />
+    <meta title={title} />
+    <title>Pokemon Zone</title>
+  </head>
+  <body>
+    <main
+      class="px-7 md:px-32 py-14 sm:py-28 flex flex-col items-center text-center h-full"
+    >
+      <slot />
     </main>
-</body>
+  </body>
 </html>
